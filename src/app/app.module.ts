@@ -7,13 +7,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AnimalComponent } from './components/animal/animal.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AnimalesComponent
+    AnimalesComponent,
+    AnimalComponent
   ],
   imports: [
     BrowserModule,
