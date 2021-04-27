@@ -9,7 +9,7 @@
         <h6><i class="fas fa-hand-holding-usd"></i>&nbsp;&nbsp;Total Donaciones:</h6>
       </div>
       <div class="col">
-        <h6><i class="fas fa-cat"></i>&nbsp;&nbsp;Gatos con necesidades:</h6>
+        <h6><i class="fas fa-cat"></i>&nbsp;&nbsp;Gatos con necesidades: {{ totalCats }}</h6>
       </div>
     </div>
     <hr style="border: 1px solid  #FFA800;;">
@@ -37,45 +37,24 @@
             <th scope="col"></th>
           </tr>
         </thead>
+
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
+
+          <tr *ngFor="let animal of animales; let i = index; let conteo = count">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ animal.nombre }}</td>
+            <td>{{ animal.veterinario }}</td>
+            <td>{{ animal.intervenciones }}</td>
+            <td>{{ animal.cantidadPendiente }}</td>
+            <td><button type="button" class="btn btn-primary shadow"
+                style="border-radius: 25px; border-style: none; background: #FFA800; width: 100%;">DETALLE</button>
+            </td>
           </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+
         </tbody>
+
       </table>
 
     </div>
-
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </div>

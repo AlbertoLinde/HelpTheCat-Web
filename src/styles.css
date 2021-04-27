@@ -1,14 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 .navbar {
   background-color: transparent !important;
   font-family: "Poppins";
-  font: 100;
 }
 
 .navbar ul{
   font-family: "Poppins";
 }
 
-
+body{
+  font-family: "Poppins";
+  font-weight: 400;
+}

@@ -2,15 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { AnimalModel } from '../models/animal.model';
+import { environment } from './../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnimalService {
 
-  constructor(private http: HttpClient) { }
+  private url = environment.url;
+  private totalCats: number;
 
-  private url = 'https://help-the-cats-default-rtdb.firebaseio.com'
+  constructor(private http: HttpClient) { }
 
   newAnimal(animal: AnimalModel) {
     return this.http.post(`${this.url}/animales.json`, animal)
@@ -25,8 +28,15 @@ export class AnimalService {
   getAnimales() {
     return this.http.get(`${this.url}/animales.json`)
       .pipe(
+        map(this.createArray)
+      )
+  }
+
+  getTotalAnimals() {
+    return this.http.get(`${this.url}/animales.json`)
+      .pipe(
         map(resp => {
-          this.createArray(resp)
+          return Object.keys(resp).length;
         })
       )
   }
@@ -45,6 +55,8 @@ export class AnimalService {
 
         animales.push(animal);
       })
+    this.totalCats = animales.length;
+    console.log("asa" + this.totalCats)
     return animales;
   }
 

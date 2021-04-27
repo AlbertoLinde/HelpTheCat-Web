@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AnimalesComponent } from './components/animales/animales.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AnimalComponent } from './components/animal/animal.component'
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AnimalComponent } from './components/animal/animal.component'
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AnimalComponent } from './components/animal/animal.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

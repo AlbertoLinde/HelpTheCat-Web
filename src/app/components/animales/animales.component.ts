@@ -10,16 +10,25 @@ import { AnimalService } from 'src/app/services/animal.service';
 })
 export class AnimalesComponent implements OnInit {
 
-  animal: AnimalModel = new AnimalModel();
+  animales: AnimalModel [] = [];
+  totalCats: number;
 
   constructor(private animalService: AnimalService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
     this.animalService.getAnimales()
       .subscribe(resp => {
         console.log(resp);
+        this.animales = resp;
       });
+
+    // TO-DO Pendiente de modificar, repetitivo.
+    this.animalService.getTotalAnimals()
+      .subscribe(resp => {
+        this.totalCats = resp;
+      });
+
   }
 
 }
