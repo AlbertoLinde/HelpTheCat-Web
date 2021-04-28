@@ -1,58 +1,97 @@
-<h1>New Boost</h1>
+<div class="container">
 
-<div class="row text-right">
-  <div class="col">
-    <button class="btn btn-danger" routerLink="/heroes">
-      <i class="fa fa-arrow-left"></i>
-      Cancel
-    </button>
-  </div>
-</div>
+  <h1>Introduce los datos</h1>
+  <hr>
 
-<div class="row">
-  <div class="col">
+  <div class="row" style="align-content: center;">
 
-    <form (ngSubmit)="saveAnimal(form)" #form="ngForm">
-      <div class="form-group">
-        <label>Firebase ID</label>
-        <input type="text" class="form-control" disabled="disabled" [(ngModel)]="animal.id" name="id" required>
+    <div class="col-md-6">
+      <img src="../assets/images/gatonuevo.png" class="img-fluid rounded shadow" alt="Responsive image">
+    </div>
+
+    <div class="col-md mt-2">
+
+      <div class="row">
+
+        <div class="col h-20">
+          Por favor introduce todos los datos que se solicitan a continuación, además adjunta una foto y si dispones de
+          algún documento como facturas del veterinario.
+        </div>
+
       </div>
-
-      <div class="form-group row">
-        <div class="col">
-          <label>Nombre</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.nombre" name="nombre" required>
-        </div>
-        <div class="col">
-          <label>Veterinario</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.veterinario" name="veterinario" required>
-        </div>
-        <div class="col">
-          <label>Intervenciones</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.intervenciones" name="intervenciones" required>
-        </div>
-        <div class="col">
-          <label>Cantidad Pendiente</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.cantidadPendiente" name="cantidadPendiente"
-            required>
-        </div>
-        <div class="col">
-          <label>Cantidad Recaudada</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.cantidadRecaudada" name="cantidadRecaudada"
-            required>
-        </div>
-      </div>
-
       <hr>
-      <div class="form-group text-center">
-        <button type="submit" class="btn btn-primary">Send</button>
-      </div>
+
+      <div class="row h-50">
+
+        <div class="col-md">
+          <form (ngSubmit)="saveAnimal(form)" #form="ngForm">
+            <div class="form-group">
+              <label>ID</label>
+              <input type="text" class="form-control" disabled="disabled" [(ngModel)]="animal.id" name="id" required>
+            </div>
+
+            <div class="form-group row">
+
+              <div class="col">
+                <label>Nombre</label>
+                <input type="text" class="form-control" [(ngModel)]="animal.nombre" name="nombre" required>
+              </div>
+              <div class="col">
+                <label>Veterinario</label>
+                <input type="text" class="form-control" [(ngModel)]="animal.veterinario" name="veterinario" required>
+              </div>
+
+            </div>
+
+            <div class="form-group row">
+
+              <div class="col">
+                <label>Cantidad Pendiente</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" aria-label="Cantidad Pendiente"
+                    aria-describedby="Cantidad Pendiente">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="Cantidad Pendiente"><i class="fas fa-euro-sign"></i></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <label>Cantidad Recaudada</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" aria-label="Cantidad Recaudada"
+                    aria-describedby="Cantidad Recaudada">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="Cantidad Recaudada"><i class="fas fa-euro-sign"></i></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-group row">
+              <div class="col">
+                <label>Intervenciones</label>
+                <input type="text" class="form-control" [(ngModel)]="animal.intervenciones" name="intervenciones"
+                  required>
+              </div>
+            </div>
+
+            <div class="col">
+              <button type="button" class="btn btn-primary shadow"
+                style="border-radius: 25px; border-style: none; background: #FFA800; width: 100%; bottom: 0;">GUARDAR</button>
+            </div>
 
 
-    </form>
+          </form> <!-- FIN FORM -->
+        </div> <!-- FIN COL -->
+      </div> <!-- FIN ROW -->
 
+
+    </div>
 
   </div>
+
 
 
 </div>

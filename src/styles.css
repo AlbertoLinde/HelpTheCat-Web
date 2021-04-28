@@ -14,3 +14,7 @@ body{
   font-family: "Poppins";
   font-weight: 400;
 }
+
+hr{
+  border: 1px solid  #FFA800;
+}
