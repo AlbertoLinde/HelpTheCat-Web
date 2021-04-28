@@ -10,8 +10,10 @@ import { AnimalService } from 'src/app/services/animal.service';
 })
 export class AnimalesComponent implements OnInit {
 
-  animales: AnimalModel [] = [];
+  animales: AnimalModel[] = [];
   totalCats: number;
+  pendienteFacturas: number;
+  cantidadRecaudada: number;
 
   constructor(private animalService: AnimalService) { }
 
@@ -19,16 +21,30 @@ export class AnimalesComponent implements OnInit {
 
     this.animalService.getAnimales()
       .subscribe(resp => {
-        console.log(resp);
         this.animales = resp;
+        this.totalCats = this.animales.length;
+        this.pendienteFacturas = this.calcularDonaciones(resp);
+        this.cantidadRecaudada = this.cantidadRecaudado(resp);
       });
+  }
 
-    // TO-DO Pendiente de modificar, repetitivo.
-    this.animalService.getTotalAnimals()
-      .subscribe(resp => {
-        this.totalCats = resp;
-      });
+  // TO-DO Pendiente comprobación de errores.
+  calcularDonaciones(resp): number {
+    var total: number = 0;
+    resp.forEach(element => {
+      let number = parseInt(element.cantidadPendiente);
+      total += number;
+    });
+    return total;
+  }
 
+  cantidadRecaudado(resp): number {
+    var total: number = 0;
+    resp.forEach(element => {
+      let number = parseInt(element.cantidadRecaudada);
+      total += number;
+    });
+    return total;
   }
 
 }

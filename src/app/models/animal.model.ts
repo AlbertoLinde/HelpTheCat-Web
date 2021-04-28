@@ -4,4 +4,5 @@ export class AnimalModel {
   veterinario: string;
   intervenciones: string;
   cantidadPendiente: string;
+  cantidadRecaudada: string;
 }

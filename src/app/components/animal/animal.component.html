@@ -21,19 +21,25 @@
       <div class="form-group row">
         <div class="col">
           <label>Nombre</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.nombre" name="typeBoost" required>
+          <input type="text" class="form-control" [(ngModel)]="animal.nombre" name="nombre" required>
         </div>
         <div class="col">
           <label>Veterinario</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.veterinario" name="gold" required>
+          <input type="text" class="form-control" [(ngModel)]="animal.veterinario" name="veterinario" required>
         </div>
         <div class="col">
           <label>Intervenciones</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.intervenciones" name="gold" required>
+          <input type="text" class="form-control" [(ngModel)]="animal.intervenciones" name="intervenciones" required>
         </div>
         <div class="col">
           <label>Cantidad Pendiente</label>
-          <input type="text" class="form-control" [(ngModel)]="animal.cantidadPendiente" name="gold" required>
+          <input type="text" class="form-control" [(ngModel)]="animal.cantidadPendiente" name="cantidadPendiente"
+            required>
+        </div>
+        <div class="col">
+          <label>Cantidad Recaudada</label>
+          <input type="text" class="form-control" [(ngModel)]="animal.cantidadRecaudada" name="cantidadRecaudada"
+            required>
         </div>
       </div>
 

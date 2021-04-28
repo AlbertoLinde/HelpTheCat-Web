@@ -11,7 +11,6 @@ import { environment } from './../../environments/environment';
 export class AnimalService {
 
   private url = environment.url;
-  private totalCats: number;
 
   constructor(private http: HttpClient) { }
 
@@ -55,8 +54,6 @@ export class AnimalService {
 
         animales.push(animal);
       })
-    this.totalCats = animales.length;
-    console.log("asa" + this.totalCats)
     return animales;
   }
 
