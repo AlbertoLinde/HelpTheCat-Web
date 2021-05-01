@@ -29,7 +29,6 @@
       <table class="table" style="border-top: solid white; text-align: center;">
         <thead>
           <tr>
-            <th scope="col">
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col">Veterinario</th>
@@ -42,14 +41,13 @@
         <tbody>
 
           <tr *ngFor="let animal of animales; let i = index; let conteo = count">
-            <th scope="row">{{ i + 1 }}</th>
-            <td><img class="img-thumbnail rounded-lg" style="height: 50px; border: none;"
+            <td class="align-middle"><img class="img-thumbnail rounded-lg" style="height: 50px; border: none;"
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" data-holder-rendered="true"></td>
-            <td>{{ animal.nombre }}</td>
-            <td>{{ animal.veterinario }}</td>
-            <td>{{ animal.intervenciones }}</td>
-            <td>{{ animal.cantidadPendiente }}</td>
-            <td><button type="button" class="btn btn-primary shadow"
+            <td class="align-middle">{{ animal.nombre }}</td>
+            <td class="align-middle">{{ animal.veterinario }}</td>
+            <td class="align-middle">{{ animal.intervenciones }}</td>
+            <td class="align-middle">{{ animal.cantidadPendiente }} €</td>
+            <td class="align-middle"><button type="button" class="btn btn-primary shadow"
                 style="border-radius: 25px; border-style: none; background: #FFA800; width: 100%;">DETALLE</button>
             </td>
           </tr>

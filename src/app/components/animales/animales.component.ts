@@ -23,6 +23,10 @@ export class AnimalesComponent implements OnInit {
       .subscribe(resp => {
         this.animales = resp;
         this.totalCats = this.animales.length;
+
+
+        console.log("RESPUESTA INIT : " + JSON.stringify(resp))
+
         this.pendienteFacturas = this.calcularDonaciones(resp);
         this.cantidadRecaudada = this.cantidadRecaudado(resp);
       });
@@ -32,8 +36,15 @@ export class AnimalesComponent implements OnInit {
   calcularDonaciones(resp): number {
     var total: number = 0;
     resp.forEach(element => {
-      let number = parseInt(element.cantidadPendiente);
-      total += number;
+      console.log("Cantidad Pendiente" + element.cantidadPendiente)
+      if (element.cantidadPendiente != null && element.cantidadPendiente != undefined) {
+        let number = parseInt(element.cantidadPendiente);
+        total += number;
+      } else {
+        total += 0;
+      }
+
+      console.log(total)
     });
     return total;
   }
@@ -41,8 +52,13 @@ export class AnimalesComponent implements OnInit {
   cantidadRecaudado(resp): number {
     var total: number = 0;
     resp.forEach(element => {
-      let number = parseInt(element.cantidadRecaudada);
-      total += number;
+      if (element.cantidadRecaudada != null && element.cantidadRecaudada != undefined) {
+        let number = parseInt(element.cantidadRecaudada);
+        total += number;
+      } else {
+        total += 0;
+      }
+      console.log(total)
     });
     return total;
   }
