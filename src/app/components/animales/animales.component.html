@@ -43,8 +43,8 @@
           <tr *ngFor="let animal of animales; let i = index; let conteo = count">
             <td class="align-middle"><img class="img-thumbnail rounded-lg" style="height: 50px; border: none;"
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" data-holder-rendered="true"></td>
-            <td class="align-middle">{{ animal.nombre }}</td>
-            <td class="align-middle">{{ animal.veterinario }}</td>
+            <td class="align-middle">{{ animal.nombre | uppercase }}</td>
+            <td class="align-middle">{{ animal.veterinario | uppercase }}</td>
             <td class="align-middle">{{ animal.intervenciones }}</td>
             <td class="align-middle">{{ animal.cantidadPendiente }} €</td>
             <td class="align-middle"><button type="button" class="btn btn-primary shadow"

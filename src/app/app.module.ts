@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { AsociacionesComponent } from './components/asociaciones/asociaciones.component';
+import { AsociacionComponent } from './components/asociacion/asociacion.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AsociacionesComponent } from './components/asociaciones/asociaciones.co
     NavbarComponent,
     AnimalesComponent,
     AnimalComponent,
-    AsociacionesComponent
+    AsociacionesComponent,
+    AsociacionComponent
   ],
   imports: [
     BrowserModule,
