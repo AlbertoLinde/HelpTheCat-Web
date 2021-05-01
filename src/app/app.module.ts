@@ -10,13 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { AsociacionesComponent } from './components/asociaciones/asociaciones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AnimalesComponent,
-    AnimalComponent
+    AnimalComponent,
+    AsociacionesComponent
   ],
   imports: [
     BrowserModule,

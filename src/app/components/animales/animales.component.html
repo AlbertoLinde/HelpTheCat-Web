@@ -31,6 +31,7 @@
           <tr>
             <th scope="col">
             <th scope="col"></th>
+            <th scope="col"></th>
             <th scope="col">Veterinario</th>
             <th scope="col">Intervenciones</th>
             <th scope="col">Pendiente</th>
@@ -42,6 +43,8 @@
 
           <tr *ngFor="let animal of animales; let i = index; let conteo = count">
             <th scope="row">{{ i + 1 }}</th>
+            <td><img class="img-thumbnail rounded-lg" style="height: 50px; border: none;"
+                src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" data-holder-rendered="true"></td>
             <td>{{ animal.nombre }}</td>
             <td>{{ animal.veterinario }}</td>
             <td>{{ animal.intervenciones }}</td>

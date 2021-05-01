@@ -11,6 +11,7 @@ import { AnimalService } from 'src/app/services/animal.service';
 export class AnimalComponent implements OnInit {
 
   animal: AnimalModel = new AnimalModel();
+  fileInput: File = null;
 
   constructor(private animalService: AnimalService) { }
 
@@ -23,5 +24,6 @@ export class AnimalComponent implements OnInit {
         console.log(resp);
       })
   }
+
 
 }
