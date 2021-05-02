@@ -14,13 +14,15 @@
       <div id="accordionExample" class="accordion shadow">
 
         <!-- Accordion item 1 -->
-        <div class="card">
+        <div class="card" *ngFor="let asociacion of asociaciones; let i = index">
+
           <div id="headingOne" class="card-header bg-white shadow-sm border-0">
             <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne"
-                class="d-block position-relative text-dark text-uppercase collapsible-link py-2">VALLE COLINO</a></h6>
+                aria-expanded="true" aria-controls="collapseOne" attr.data-target="#collapse_{{i}}"
+                class="d-block position-relative text-dark text-uppercase collapsible-link py-2">{{ asociacion.nombre }}</a></h6>
           </div>
-          <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
+
+          <div id="collapse_{{ i }}" aria-labelledby="headingOne" data-parent="#accordionExample"
             style="border-left: 3px solid #FFA800; margin-top: 1px; border-bottom-right-radius: 5%;"
             class="collapse hide">
             <div class="card-body">
@@ -28,11 +30,7 @@
               <div class="row">
                 <div class="col">
                   <p class="font-weight-light m-0">
-                    El Albergue Comarcal Valle Colino dedica su actividad a la protección y defensa de los animales.
-                    Rescatamos a los que han sido abandonados e intentamos darles una vida digna en nuestro centro, así
-                    como también hacemos todo lo posible para que tengan oportunidad de ser adoptados y encontrar un
-                    hogar donde se les cuide.
-                    En Valle Colino se les salva, protege y pueden encontrar un nuevo hogar
+                    {{ asociacion.descripcion }}
                   </p>
                 </div>
 
@@ -40,10 +38,14 @@
                   <p class="font-weight-light m-0">
                   </p>
                   <ul>
-                    <li><span class="align-middle"><i class="fab fa-instagram"></i>&nbsp;<a href="https://www.w3schools.com">Instagram</a></span></li>
-                    <li><span class="align-middle"><i class="fab fa-twitter"></i>&nbsp;<a href="https://www.w3schools.com">Twitter</a></span></li>
-                    <li><span class="align-middle"><i class="fab fa-facebook"></i>&nbsp;<a href="https://www.w3schools.com">Facebook</a></span></li>
-                    <li><span class="align-middle"><i class="fas fa-globe"></i>&nbsp;<a href="https://www.w3schools.com">Web</a></span></li>
+                    <li><span class="align-middle"><i class="fab fa-instagram"></i>&nbsp;<a
+                          href="{{ asociacion.instagram }}">Instagram</a></span></li>
+                    <li><span class="align-middle"><i class="fab fa-twitter"></i>&nbsp;<a
+                          href="{{ asociacion.twitter }}">Twitter</a></span></li>
+                    <li><span class="align-middle"><i class="fab fa-facebook"></i>&nbsp;<a
+                          href="{{ asociacion.facebook }}">Facebook</a></span></li>
+                    <li><span class="align-middle"><i class="fas fa-globe"></i>&nbsp;<a
+                          href="{{ asociacion.web }}">Web</a></span></li>
                   </ul>
                 </div>
               </div>

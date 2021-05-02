@@ -18,3 +18,11 @@ body{
 hr{
   border: 1px solid  #FFA800;
 }
+
+textarea {
+  resize: none;
+}
+
+a{
+  color: black;
+}

@@ -24,6 +24,7 @@
 
         <div class="col-md">
           <form (ngSubmit)="saveAsociacion(form)" #form="ngForm">
+
             <div class="form-group">
               <label>ID</label>
               <input type="text" class="form-control" disabled="disabled" [(ngModel)]="asociacion.id" name="id"
@@ -31,46 +32,39 @@
             </div>
 
             <div class="form-group">
-
               <label>Nombre</label>
-              <input type="text" class="form-control" style="margin-bottom: 2%;" [(ngModel)]="asociacion.descripcion"
+              <input type="text" class="form-control" style="margin-bottom: 2%;" [(ngModel)]="asociacion.nombre"
                 name="nombre" required>
 
               <label for="exampleFormControlTextarea1">Descripción</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="asociacion.descripcion"
-                rows="3"></textarea>
-
+              <textarea class="form-control" id="exampleFormControlTextarea1" name="descripcion"
+                [(ngModel)]="asociacion.descripcion" rows="5"></textarea>
             </div>
 
             <div class="form-group">
               <div class="row">
                 <div class="col">
                   <label>Instagram</label>
-                  <input type="text" class="form-control" [(ngModel)]="asociacion.instagram" name="nombre" required>
+                  <input type="text" class="form-control" [(ngModel)]="asociacion.instagram" name="instagram" required>
                 </div>
                 <div class="col">
                   <label>Twitter</label>
-                  <input type="text" class="form-control" [(ngModel)]="asociacion.twitter" name="nombre" required>
+                  <input type="text" class="form-control" [(ngModel)]="asociacion.twitter" name="twitter" required>
                 </div>
               </div>
               <div class="row" style="margin-top: 2%;">
                 <div class="col">
                   <label>Facebook</label>
-                  <input type="ar" class="form-control" [(ngModel)]="asociacion.facebook" name="nombre" required>
+                  <input type="ar" class="form-control" [(ngModel)]="asociacion.facebook" name="facebook" required>
                 </div>
                 <div class="col">
                   <label>Web</label>
-                  <input type="ar" class="form-control" [(ngModel)]="asociacion.web" name="nombre" required>
+                  <input type="ar" class="form-control" [(ngModel)]="asociacion.web" name="web" required>
                 </div>
               </div>
 
 
             </div>
-            <div class="form-group">
-              <label>Nombre</label>
-              <input type="ar" class="form-control" [(ngModel)]="asociacion.descripcion" name="nombre" required>
-            </div>
-
 
             <div class="col" style="margin-top: 7%;">
               <button type="submit" class="btn btn-primary shadow"
