@@ -85,7 +85,13 @@ Finalmente esta web simplemente consumirá datos de un Rest en **Firebase**.
 
 4. Modifica las variables de entorno (url) en `environment.ts` (Mi endopoint no podrás usarlo ya que no tendrás permisos).
 
+5. Pon en marcha el servidor
 
+   ```sh
+
+   ng serve -o
+
+   ```
 
 
 
