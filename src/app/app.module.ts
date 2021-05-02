@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { AsociacionesComponent } from './components/asociaciones/asociaciones.component';
 import { AsociacionComponent } from './components/asociacion/asociacion.component';
+import { VeterinarioComponent } from './components/veterinario/veterinario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AsociacionComponent } from './components/asociacion/asociacion.componen
     AnimalesComponent,
     AnimalComponent,
     AsociacionesComponent,
-    AsociacionComponent
+    AsociacionComponent,
+    VeterinarioComponent
   ],
   imports: [
     BrowserModule,

@@ -9,25 +9,29 @@
   </div>
 
   <div class="row" style="margin-top: 5%;">
-    <div class="col">
-      <!-- Accordion -->
-      <div id="accordionExample" class="accordion shadow">
 
-        <!-- Accordion item 1 -->
+    <div class="col">
+
+      <div id="accordion" class="accordion shadow">
+
         <div class="card" *ngFor="let asociacion of asociaciones; let i = index">
 
           <div id="headingOne" class="card-header bg-white shadow-sm border-0">
-            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne"
+
+            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapse_{{i}}"
                 aria-expanded="true" aria-controls="collapseOne" attr.data-target="#collapse_{{i}}"
-                class="d-block position-relative text-dark text-uppercase collapsible-link py-2">{{ asociacion.nombre }}</a></h6>
+                class="d-block position-relative text-dark text-uppercase collapsible-link py-2">{{ asociacion.nombre
+                }}</a></h6>
+
           </div>
 
-          <div id="collapse_{{ i }}" aria-labelledby="headingOne" data-parent="#accordionExample"
+          <div id="collapse_{{ i }}" aria-labelledby="headingOne" data-parent="#accordion"
             style="border-left: 3px solid #FFA800; margin-top: 1px; border-bottom-right-radius: 5%;"
             class="collapse hide">
             <div class="card-body">
 
               <div class="row">
+
                 <div class="col">
                   <p class="font-weight-light m-0">
                     {{ asociacion.descripcion }}
@@ -48,19 +52,18 @@
                           href="{{ asociacion.web }}">Web</a></span></li>
                   </ul>
                 </div>
+
               </div>
-
-
-
 
             </div>
           </div>
+
         </div>
 
       </div>
     </div>
-  </div>
 
+  </div>
 
 
 

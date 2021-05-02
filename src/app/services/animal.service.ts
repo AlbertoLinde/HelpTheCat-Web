@@ -24,6 +24,10 @@ export class AnimalService {
       )
   }
 
+  getAnimal(id: string) {
+    return this.http.get(`${this.url}/animales/${id}.json`);
+  }
+
   getAnimales() {
     return this.http.get(`${this.url}/animales.json`)
       .pipe(
@@ -38,6 +42,14 @@ export class AnimalService {
           return Object.keys(resp).length;
         })
       )
+  }
+
+  updateAnimal(animal: AnimalModel) {
+    const heroeTemp = {
+      ...animal
+    }
+    delete heroeTemp.id;
+    return this.http.put(`${this.url}/animales/${animal.id}.json`, heroeTemp)
   }
 
   private createArray(animalesObject: object) {

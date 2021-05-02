@@ -26,3 +26,11 @@ textarea {
 a{
   color: black;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+ul{
+  list-style-type: none;
+}

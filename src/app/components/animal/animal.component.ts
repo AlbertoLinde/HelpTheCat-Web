@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { AnimalModel } from 'src/app/models/animal.model';
 import { AnimalService } from 'src/app/services/animal.service';
 
@@ -13,16 +14,35 @@ export class AnimalComponent implements OnInit {
   animal: AnimalModel = new AnimalModel();
   fileInput: File = null;
 
-  constructor(private animalService: AnimalService) { }
+  constructor(private route: ActivatedRoute, private animalService: AnimalService) { }
 
   ngOnInit(): void {
+
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id !== 'nuevo') {
+      this.animalService.getAnimal(id)
+        .subscribe((resp: AnimalModel) => {
+          this.animal = resp;
+          this.animal.id = id;
+        });
+    }
   }
 
   saveAnimal(form: NgForm) {
-    this.animalService.newAnimal(this.animal)
-      .subscribe(resp => {
-        console.log(resp);
-      })
+
+
+    if (this.animal.id) {
+      this.animalService.updateAnimal(this.animal)
+        .subscribe(resp => {
+          console.log("RESPUESTA_______" + JSON.stringify(resp));
+        });
+    } else {
+      this.animalService.newAnimal(this.animal)
+        .subscribe(resp => {
+          console.log(resp);
+          this.animal = resp;
+        });
+    }
   }
 
 

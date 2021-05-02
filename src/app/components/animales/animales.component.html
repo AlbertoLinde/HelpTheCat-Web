@@ -1,4 +1,4 @@
-<div class="md-12">
+<div class="md-12 animate__animated animate__slideInDown">
 
   <div class="container">
     <div class="row" style="text-align: center;">
@@ -17,12 +17,10 @@
     <div class="row">
       <br>
 
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+      <p class="font-weight-light m-0 text-center">Este proyecto se ha desarrollado con el interes de agrupar a todas
+        las asociaciones y centros de acogida de la
+        isla de Tenerife bajo un mismo portal. También se busca dar la transpariencia adecuada para el estado de los
+        animales, gastos médicos y cantidades pendientes de pagar a los veterinarios.
 
       </p><br>
 
@@ -47,7 +45,8 @@
             <td class="align-middle">{{ animal.veterinario | uppercase }}</td>
             <td class="align-middle">{{ animal.intervenciones }}</td>
             <td class="align-middle">{{ animal.cantidadPendiente }} €</td>
-            <td class="align-middle"><button type="button" class="btn btn-primary shadow"
+            <td class="align-middle">
+              <button class="btn btn-primary shadow" [routerLink]="['/animal', animal.id]"
                 style="border-radius: 25px; border-style: none; background: #FFA800; width: 100%;">DETALLE</button>
             </td>
           </tr>
