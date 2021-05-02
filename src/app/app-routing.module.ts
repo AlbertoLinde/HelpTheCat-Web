@@ -4,6 +4,7 @@ import { AnimalComponent } from './components/animal/animal.component';
 import { AnimalesComponent } from './components/animales/animales.component';
 import { AsociacionComponent } from './components/asociacion/asociacion.component';
 import { AsociacionesComponent } from './components/asociaciones/asociaciones.component';
+import { LoginComponent } from './components/login/login.component';
 import { VeterinarioComponent } from './components/veterinario/veterinario.component';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'asociacion', component: AsociacionComponent },
   { path: 'asociacion/:id', component: AsociacionComponent },
   { path: 'veterinarios', component: VeterinarioComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'animales' }
 ]
 

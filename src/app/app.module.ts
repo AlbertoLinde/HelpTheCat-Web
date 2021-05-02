@@ -14,6 +14,7 @@ import { AsociacionesComponent } from './components/asociaciones/asociaciones.co
 import { AsociacionComponent } from './components/asociacion/asociacion.component';
 import { VeterinarioComponent } from './components/veterinario/veterinario.component';
 import { EmptyimagePipe } from './pipes/emptyimage.pipe';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { EmptyimagePipe } from './pipes/emptyimage.pipe';
     AsociacionesComponent,
     AsociacionComponent,
     VeterinarioComponent,
-    EmptyimagePipe
+    EmptyimagePipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

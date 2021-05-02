@@ -34,3 +34,14 @@ a{
 ul{
   list-style-type: none;
 }
+
+.colorcoorporativo{
+  color: #FFA800;
+}
+
+
+.input_linea{
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid #FFA800;
+}

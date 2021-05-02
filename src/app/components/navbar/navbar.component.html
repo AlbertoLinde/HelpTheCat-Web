@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="color: #FFA800;">
-  <a class="navbar-brand" [routerLink]="['/animales']" routerLinkActive="router-link-active"  style="padding: 10px; padding-right: 20px; padding-left: 20px; color: #FFA800;">
+  <a class="navbar-brand" [routerLink]="['/animales']" routerLinkActive="router-link-active"
+    style="padding: 10px; padding-right: 20px; padding-left: 20px; color: #FFA800;">
     <h2><b>Help The Cats</b></h2>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -25,7 +26,7 @@
       </li>
     </ul>
   </div>
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" [routerLink]="['/login']" routerLinkActive="router-link-active">
     <i class="fas fa-user-lock"></i>
   </a>
 </nav>
