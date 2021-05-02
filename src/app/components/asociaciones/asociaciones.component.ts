@@ -17,9 +17,7 @@ export class AsociacionesComponent implements OnInit {
     this.asociacionService.getAsociaciones()
       .subscribe(resp => {
         this.asociaciones = resp;
-
-        console.log("ASOCIACIONES" + resp)
-
+        //console.log("ASOCIACIONES" + resp)
       })
   }
 

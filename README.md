@@ -46,15 +46,10 @@ Finalmente esta web simplemente consumirá datos de un Rest en **Firebase**.
 ## Construido con 🛠️
 
 
-
 * [Angular](https://angular.io/) 
-
 * [Node.js](https://nodejs.org/es/)
-
 * [Boostrap](https://getbootstrap.com/)
-
 * [Firebase]()
-
 * [JavasCript]()
 
 
@@ -98,11 +93,9 @@ Finalmente esta web simplemente consumirá datos de un Rest en **Firebase**.
 ## Features Pendientes 🔨
 
 * PIPE para el control de cantidades de facturas y donaciones.
-
 * Autentificación.
-
 * Virtual Scroll.
-
+* Recuperar veterinarios desde Rest y hacer crud.
 * Y millones de cosas más...
 
 

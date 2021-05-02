@@ -34,12 +34,11 @@ export class AnimalComponent implements OnInit {
     if (this.animal.id) {
       this.animalService.updateAnimal(this.animal)
         .subscribe(resp => {
-          console.log("RESPUESTA_______" + JSON.stringify(resp));
+          //console.log("RESPUESTA__" + JSON.stringify(resp));
         });
     } else {
       this.animalService.newAnimal(this.animal)
         .subscribe(resp => {
-          console.log(resp);
           this.animal = resp;
         });
     }

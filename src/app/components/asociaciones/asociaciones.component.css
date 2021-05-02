@@ -1,4 +1,3 @@
-/* Horizontal line */
 .collapsible-link::before {
   content: '';
   width: 14px;
@@ -11,7 +10,6 @@
   transition: all 0.3s;
 }
 
-/* Vertical line */
 .collapsible-link::after {
   content: '';
   width: 2px;

@@ -5,8 +5,6 @@
 export const environment = {
   production: false,
   url: 'https://help-the-cats-default-rtdb.firebaseio.com'
-
-
 };
 
 /*
