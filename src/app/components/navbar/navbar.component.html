@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="color: #FFA800;">
-  <a class="navbar-brand" href="#" style="padding: 10px; padding-right: 20px; padding-left: 20px; color: #FFA800;">
+  <a class="navbar-brand" [routerLink]="['/animales']" routerLinkActive="router-link-active"  style="padding: 10px; padding-right: 20px; padding-left: 20px; color: #FFA800;">
     <h2><b>Help The Cats</b></h2>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -13,12 +13,12 @@
           style="color: #FFA800;">Listado</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/veterinarios']" routerLinkActive="router-link-active"
-          style="color: #FFA800;">Veterinarios</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" [routerLink]="['/asociaciones']" routerLinkActive="router-link-active"
           style="color: #FFA800;">Asociaciones</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/veterinarios']" routerLinkActive="router-link-active"
+          style="color: #FFA800;">Veterinarios</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" style="color: #FFA800;">Donaciones</a>

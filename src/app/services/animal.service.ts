@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { AnimalModel } from '../models/animal.model';
+import { Animal } from '../models/animal.model';
 import { environment } from './../../environments/environment';
 
 
@@ -14,7 +14,7 @@ export class AnimalService {
 
   constructor(private http: HttpClient) { }
 
-  newAnimal(animal: AnimalModel) {
+  newAnimal(animal: Animal) {
     return this.http.post(`${this.url}/animales.json`, animal)
       .pipe(
         map((resp: any) => {
@@ -44,7 +44,7 @@ export class AnimalService {
       )
   }
 
-  updateAnimal(animal: AnimalModel) {
+  updateAnimal(animal: Animal) {
     const heroeTemp = {
       ...animal
     }
@@ -54,23 +54,20 @@ export class AnimalService {
 
   private createArray(animalesObject: object) {
 
-    const animales: AnimalModel[] = [];
+    const animales: Animal[] = [];
     console.log(animalesObject)
 
     if (animalesObject === null) { return []; }
 
     Object.keys(animalesObject)
       .forEach(key => {
-        const animal: AnimalModel = animalesObject[key];
+        const animal: Animal = animalesObject[key];
         animal.id = key;
 
         animales.push(animal);
       })
     return animales;
   }
-
-
-
 
 
 }

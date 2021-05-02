@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimalModel } from 'src/app/models/animal.model';
+import { Animal } from 'src/app/models/animal.model';
 import { AnimalService } from 'src/app/services/animal.service';
 
 
@@ -10,7 +10,7 @@ import { AnimalService } from 'src/app/services/animal.service';
 })
 export class AnimalesComponent implements OnInit {
 
-  animales: AnimalModel[] = [];
+  animales: Animal[] = [];
   totalCats: number;
   pendienteFacturas: number;
   cantidadRecaudada: number;
