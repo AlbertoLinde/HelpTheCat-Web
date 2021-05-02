@@ -13,6 +13,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { AsociacionesComponent } from './components/asociaciones/asociaciones.component';
 import { AsociacionComponent } from './components/asociacion/asociacion.component';
 import { VeterinarioComponent } from './components/veterinario/veterinario.component';
+import { EmptyimagePipe } from './pipes/emptyimage.pipe';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { VeterinarioComponent } from './components/veterinario/veterinario.compo
     AnimalComponent,
     AsociacionesComponent,
     AsociacionComponent,
-    VeterinarioComponent
+    VeterinarioComponent,
+    EmptyimagePipe
   ],
   imports: [
     BrowserModule,

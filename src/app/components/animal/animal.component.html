@@ -48,8 +48,8 @@
               <div class="col">
                 <label>Cantidad Pendiente</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" [(ngModel)]="animal.cantidadPendiente" name="cantidadPendiente"
-                    aria-label="Cantidad Pendiente" aria-describedby="Cantidad Pendiente">
+                  <input type="text" class="form-control" [(ngModel)]="animal.cantidadPendiente"
+                    name="cantidadPendiente" aria-label="Cantidad Pendiente" aria-describedby="Cantidad Pendiente">
                   <div class="input-group-append">
                     <span class="input-group-text" id="Cantidad Pendiente"><i class="fas fa-euro-sign"></i></span>
                   </div>
@@ -59,8 +59,8 @@
               <div class="col">
                 <label>Cantidad Recaudada</label>
                 <div class="input-group">
-                  <input type="number" class="form-control" min="1" [(ngModel)]="animal.cantidadRecaudada" name="cantidadRecaudada"
-                    aria-label="Cantidad Recaudada" aria-describedby="Cantidad Recaudada">
+                  <input type="number" class="form-control" min="1" [(ngModel)]="animal.cantidadRecaudada"
+                    name="cantidadRecaudada" aria-label="Cantidad Recaudada" aria-describedby="Cantidad Recaudada">
                   <div class="input-group-append">
                     <span class="input-group-text" id="Cantidad Recaudada"><i class="fas fa-euro-sign"></i></span>
                   </div>
@@ -80,7 +80,7 @@
             <div class="form-group row">
               <div class="col">
                 <label>Imagen</label>
-                <input type="text" class="form-control" name="imgen">
+                <input type="text" class="form-control" [(ngModel)]="animal.urlImage" name="imgen">
                 <label>Factura</label>
                 <input type="text" class="form-control" name="facturas">
               </div>
