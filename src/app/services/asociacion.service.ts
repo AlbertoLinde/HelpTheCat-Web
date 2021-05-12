@@ -15,7 +15,7 @@ export class AsociacionService {
 
 
   newAsociacion(asociacion: Asociacion) {
-    return this.http.post(`${this.url}/asociaciones.json`, asociacion)
+    return this.http.post(`${this.url}/asociacion.json`, asociacion)
       .pipe(
         map((resp: any) => {
           asociacion.id = resp.name;
@@ -25,7 +25,7 @@ export class AsociacionService {
   }
 
   getAsociaciones() {
-    return this.http.get(`${this.url}/asociaciones.json`)
+    return this.http.get(`${this.url}/asociacion.json`)
       .pipe(
         map(this.createArray)
       )

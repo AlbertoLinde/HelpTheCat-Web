@@ -20,7 +20,7 @@ export class AsociacionComponent implements OnInit {
   saveAsociacion(form: NgForm) {
     this.asociacionService.newAsociacion(this.asociacion)
       .subscribe(resp => {
-        console.log(resp);
+        //console.log(resp);
       });
   }
 
