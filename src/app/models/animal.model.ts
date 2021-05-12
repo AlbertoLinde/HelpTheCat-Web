@@ -7,4 +7,5 @@ export class Animal {
   cantidadRecaudada: string;
   urlImage: string;
   urlPdf: string;
+  descripcion: string;
 }
